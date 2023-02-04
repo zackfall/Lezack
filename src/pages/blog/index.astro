@@ -1,7 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import LastBlog from "../../components/LastBlog.astro";
+import BlogPosts from "../../components/BlogPosts.astro";
 ---
 
-<Layout title="Welcome to Lezack.">
-  <h1>Blog</h1>
+<Layout title="Blog index.">
+  <div>
+    <div>
+      <h2>Last Entry</h2>
+      <LastBlog />
+    </div>
+    <div>
+      <h2>Recent Blogs</h2>
+      <BlogPosts />
+    </div>
+  </div>
 </Layout>
