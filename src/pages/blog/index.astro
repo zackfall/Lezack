@@ -1,11 +1,11 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import LastBlog from "../../components/LastBlog.astro";
 import BlogPosts from "../../components/BlogPosts.astro";
 ---
 
-<Layout title="Blog index.">
-  <div>
+<BlogPostLayout title="Blog page">
+  <main class="flex-grow">
     <div>
       <h2>Last Entry</h2>
       <LastBlog />
@@ -14,5 +14,5 @@ import BlogPosts from "../../components/BlogPosts.astro";
       <h2>Recent Blogs</h2>
       <BlogPosts />
     </div>
-  </div>
-</Layout>
+  </main>
+</BlogPostLayout>
