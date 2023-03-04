@@ -1,3 +1,4 @@
+import Footer from "@components/Atoms/Footer";
 import Navbar from "@components/Molecules/Navbar";
 import Head from "next/head";
 
@@ -12,8 +13,11 @@ export default function HomeLayout(
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <main>{children}</main>
+      <div className="h-screen flex-col flex gap-y-6 font-sans">
+        <Navbar />
+        <main className="grow">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }

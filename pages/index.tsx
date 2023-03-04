@@ -17,7 +17,7 @@ Home.getLayout = function getLayout(page: ReactElement) {
     <Layout>
       {page}
     </Layout>
-  )
+  );
 }
 
 export default Home;
