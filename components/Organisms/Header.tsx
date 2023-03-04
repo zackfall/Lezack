@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@components/Atoms/Image";
 
 export default function Header() {
   return (
@@ -8,7 +8,7 @@ export default function Header() {
         >ᛖ ᚤᛟᚢ</span>
       </h1>
       <section className="mt-5">
-        <div className="flex justify-around items-center flex-col lg:flex-row gap-5 lg:gap-0">
+        <div className="flex justify-around items-center flex-col lg:flex-row gap-5 lg:gap-0 relative">
           <p className="lg:w-3/6 text-gray-800 text-justify lg:text-left">
             Lezack is a page where Zack can post letters in the form of blogs or
             just normal blogs to show his boyfriend Leo. Blogs don't need to be
@@ -18,7 +18,7 @@ export default function Header() {
             embarrassed by his ugly handwriting or because he's really nervous to
             give him any real letters.
           </p>
-          <Image className="h-auto w-auto" src="/assets/bkdk.png" alt="BakuDeku Image" height="300" width="300" />
+          <Image className="h-auto w-auto" src="/assets/bkdk.png" alt="BakuDeku Image" fill={false} height={300} width={300} />
         </div>
       </section>
     </header>
