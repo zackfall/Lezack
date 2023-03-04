@@ -1,4 +1,4 @@
-import Layout from "@components/Layouts/HomeLayout";
+import Layout from "@components/Layouts/GeneralLayout";
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
 
