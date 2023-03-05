@@ -11,7 +11,7 @@ const Home: NextPageWithLayout = () => {
         <Header />
         <div className="flex justify-around gap-10 mx-10 flex-col 2xl:flex-row">
           <Card name="Leo" imgSrc="/assets/deku_adventurer.jpeg" actualKin="Izuku" color="green-700">
-            Leo is a trans boy, he is very kind and affectionate and although he
+            Leo is a really cute boy, he is very kind and affectionate and although he
             seems serious at times, he actually has a very good sense of humor, he
             makes me laugh a lot and shows me very interesting things. He is very
             smart and always thinks before acting. He also thinks a lot about the
