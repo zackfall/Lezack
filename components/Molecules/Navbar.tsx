@@ -11,9 +11,9 @@ export default function Navbar() {
   };
 
     return (
-    <nav className="flex justify-between items-center lg:mx-20 mx-10 my-5">
+    <nav className="flex justify-between lg:justify-start items-center lg:mx-20 mx-10 my-5">
       <h3 className="text-gray-800 text-xl font-medium">Lezack</h3>
-      <ul className="lg:flex space-x-14 justify-end hidden">
+      <ul className="lg:flex lg:ml-16 space-x-14 justify-end hidden">
         <li>
           <a
             className="text-green-700 hover:text-orange-800 duration-200 text-lg"
