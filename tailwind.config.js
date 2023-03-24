@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-roboto)", ...fontFamily.sans],
-        sono: ["var(--font-sono)", ...fontFamily.mono]
+        sono: ["var(--font-sono)", ...fontFamily.sans]
       },
       borderRadius: {
         '50': '50%'
