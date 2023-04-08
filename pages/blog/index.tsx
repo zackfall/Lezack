@@ -1,7 +1,7 @@
-import Layout from "@components/Layouts/GeneralLayout";
-import { NextPageWithLayout } from "@pages/_app";
 import { Roboto } from "next/font/google";
-import { ReactElement } from "react";
+import BlogPosts from "@components/Molecules/BlogPosts";
+import { getAllPostsWithFrontMatter } from "lib/utils";
+import { BlogProps } from "lib/types";
 
 const roboto = Roboto({
 	weight: "400",
@@ -9,12 +9,22 @@ const roboto = Roboto({
 	variable: "--font-roboto",
 });
 
-const Blog: NextPageWithLayout = () => {
-	return <></>;
-};
+export default function Blog({ posts, title, description }: BlogProps) {
+	return (
+		<>
+			<BlogPosts posts={posts} />
+		</>
+	);
+}
 
-Blog.getLayout = function getLayout(page: ReactElement) {
-	return <Layout className={`${roboto.variable} font-sans`}>{page}</Layout>;
-};
+export async function getStaticProps() {
+	const posts = await getAllPostsWithFrontMatter("posts");
 
-export default Blog;
+	return {
+		props: {
+			posts,
+			title: "Blog",
+			description: "Post about my beloved Leo",
+		},
+	};
+}
