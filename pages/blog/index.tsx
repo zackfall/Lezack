@@ -1,7 +1,7 @@
 import { Roboto } from "next/font/google";
-import BlogPosts from "@components/Molecules/BlogPosts";
 import { getAllPostsWithFrontMatter } from "lib/utils";
 import { BlogProps } from "lib/types";
+import BlogTemplate from "@components/Templates/Blog";
 
 const roboto = Roboto({
 	weight: "400",
@@ -12,7 +12,12 @@ const roboto = Roboto({
 export default function Blog({ posts, title, description }: BlogProps) {
 	return (
 		<>
-			<BlogPosts posts={posts} />
+			<BlogTemplate
+				className={`${roboto.variable} font-sans`}
+				posts={posts}
+				title={title}
+				description={description}
+			/>
 		</>
 	);
 }

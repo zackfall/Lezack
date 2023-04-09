@@ -1,9 +1,13 @@
 import { BlogPostsProps } from "lib/types";
 import Link from "next/link";
 
-export default function BlogPosts({ posts }: BlogPostsProps) {
+interface CBlogPostsProps extends BlogPostsProps {
+	className?: string;
+}
+
+export default function BlogPosts({ posts, className }: CBlogPostsProps) {
 	return (
-		<div>
+		<div className={`${className}`}>
 			{!posts && <div>No posts!</div>}
 			<ul>
 				{posts
