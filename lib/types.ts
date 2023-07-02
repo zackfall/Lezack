@@ -2,7 +2,7 @@ export type BlogFrontMatter = {
     title: string,
     description: string,
     publishedDate: string,
-    tags: string[]
+    tag: string
 }
 
 export type BlogPostProps = {
