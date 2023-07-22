@@ -4,6 +4,7 @@ import HomeTemplate from "@components/Templates/Home";
 const roboto = Roboto({
 	weight: "400",
 	subsets: ["latin"],
+	variable: "--font-roboto",
 });
 
 export default function Home() {

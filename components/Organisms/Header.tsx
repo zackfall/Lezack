@@ -4,13 +4,14 @@ import { Sono } from "next/font/google";
 const sono = Sono({
 	weight: "400",
 	subsets: ["latin"],
+	variable: "--font-sono",
 });
 
 export default function Header() {
 	return (
 		<header className="mx-12 flex flex-col">
 			<h1
-				className={`md:text-9xl sm:text-7xl text-5xl self-center mb-10 ${sono.className} font-mono`}
+				className={`md:text-9xl sm:text-7xl text-5xl self-center mb-10 ${sono.variable} font-mono`}
 			>
 				<span className="text-green-700">ᛁ ᛚᛟᚡ</span>
 				<span className="text-orange-800">ᛖ ᚤᛟᚢ</span>
