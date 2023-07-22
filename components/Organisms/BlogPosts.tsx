@@ -2,6 +2,7 @@ import { BlogPostsProps, BlogPostProps } from "lib/types";
 import { BlogPost } from "@components/Molecules/BlogPost";
 import Image from "@components/Atoms/Image";
 import { Lateef } from "next/font/google";
+import LastEntry from "@components/Molecules/LastEntry";
 
 interface CBlogPostsProps extends BlogPostsProps {
   className?: string;
@@ -37,28 +38,7 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
   let code = <></>;
   if (last_entry !== null) {
     let tagColor = getTagColor(last_entry);
-    code = (
-      <section>
-        <h3 className="text-xl my-3">Last Post</h3>
-        <div>
-          <Image
-            src={last_entry.frontMatter.image}
-            alt="Prueba por ahora"
-            fill={false}
-            width={700}
-            height={7000}
-          />
-          <BlogPost
-            key={last_entry.slug}
-            tag={last_entry.frontMatter.tag}
-            tagColor={tagColor}
-            title={last_entry.frontMatter.title}
-            description={last_entry.frontMatter.description}
-            slug={last_entry.slug}
-          />
-        </div>
-      </section>
-    );
+    code = <LastEntry post={last_entry} tagColor={tagColor} />;
   } else {
     code = <></>;
   }
