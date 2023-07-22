@@ -1,4 +1,5 @@
 import { BlogPostsProps } from "lib/types";
+import { BlogPost } from "@components/Atoms/BlogPost";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -41,15 +42,9 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
 							case "Prueba":
 								tagColor = "text-green-700";
 								break;
-						};
+						}
 						return (
-							<article key={post.slug}>
-								<p className={`text-sm ${tagColor}`}><FontAwesomeIcon className="text-sm mr-1" icon={faCircle} /> {post.frontMatter.tag}</p>
-								<Link href={`/blog/${post.slug}`}>
-									{post.frontMatter.title}
-								</Link>
-								<p className="text-neutral-400 text-sm">{post.frontMatter.description}</p>
-							</article>
+							<BlogPost key={post.slug} tag={post.frontMatter.tag} tagColor={tagColor} title={post.frontMatter.title} description={post.frontMatter.description} slug={post.slug} />
 						);
 					})}
 			</ul>
