@@ -11,19 +11,19 @@ interface ImageProps {
   aspectRatio?: number
 }
 
-export default function Image({src, alt, className, width, height, fill, aspectRatio = 16/9}: ImageProps) {
+export default function Image({ src, alt, className, width, height, fill, aspectRatio = 16 / 9 }: ImageProps) {
   const [ratio, setRatio] = useState(aspectRatio);
   const image = fill
-  ? <NextImage
+    ? <NextImage
       src={src}
       alt={alt}
       className={className}
       fill
       onLoadingComplete={
-        ({ naturalWidth, naturalHeight}) => setRatio(naturalWidth / naturalHeight)
+        ({ naturalWidth, naturalHeight }) => setRatio(naturalWidth / naturalHeight)
       }
     />
-  : <NextImage
+    : <NextImage
       src={src}
       alt={alt}
       className={className}

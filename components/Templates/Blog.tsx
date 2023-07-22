@@ -1,5 +1,5 @@
 import { BlogProps } from "lib/types";
-import BlogPosts from "@components/Molecules/BlogPosts";
+import BlogPosts from "@components/Organisms/BlogPosts";
 import Head from "next/head";
 import Navbar from "@components/Molecules/Navbar";
 import Footer from "@components/Atoms/Footer";
