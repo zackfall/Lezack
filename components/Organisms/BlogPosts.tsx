@@ -38,7 +38,7 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
   if (last_entry !== null) {
     let tagColor = getTagColor(last_entry);
     code = (
-      <>
+      <section>
         <h3 className="text-xl my-3">Last Post</h3>
         <div>
           <Image
@@ -57,7 +57,7 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
             slug={last_entry.slug}
           />
         </div>
-      </>
+      </section>
     );
   } else {
     code = <></>;
@@ -66,31 +66,33 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
   return (
     <div className={`${className} w-9/12 self-center`}>
       {code}
-      <h3 className="text-xl my-3">Recent Blogs</h3>
-      {!posts && <div>No posts!</div>}
-      <ul>
-        {posts
-          ?.sort(
-            (a, b) =>
-              new Date(b.frontMatter.publishedDate).getTime() -
-              new Date(a.frontMatter.publishedDate).getTime()
-          )
-          .map((post) => {
-            let tagColor = getTagColor(post);
-            return (
-              <>
-                <BlogPost
-                  key={post.slug}
-                  tag={post.frontMatter.tag}
-                  tagColor={tagColor}
-                  title={post.frontMatter.title}
-                  description={post.frontMatter.description}
-                  slug={post.slug}
-                />
-              </>
-            );
-          })}
-      </ul>
+      <section>
+        <h3 className="text-xl my-3">Recent Blogs</h3>
+        {!posts && <div>No posts!</div>}
+        <ul>
+          {posts
+            ?.sort(
+              (a, b) =>
+                new Date(b.frontMatter.publishedDate).getTime() -
+                new Date(a.frontMatter.publishedDate).getTime()
+            )
+            .map((post) => {
+              let tagColor = getTagColor(post);
+              return (
+                <>
+                  <BlogPost
+                    key={post.slug}
+                    tag={post.frontMatter.tag}
+                    tagColor={tagColor}
+                    title={post.frontMatter.title}
+                    description={post.frontMatter.description}
+                    slug={post.slug}
+                  />
+                </>
+              );
+            })}
+        </ul>
+      </section>
     </div>
   );
 }
