@@ -59,16 +59,16 @@ export default function BlogPosts({ posts, className }: CBlogPostsProps) {
             .map((post) => {
               let tagColor = getTagColor(post);
               return (
-                <>
+                <li key={post.slug}>
                   <BlogPost
-                    key={post.slug}
+                    isLast={false}
                     tag={post.frontMatter.tag}
                     tagColor={tagColor}
                     title={post.frontMatter.title}
                     description={post.frontMatter.description}
                     slug={post.slug}
                   />
-                </>
+                </li>
               );
             })}
         </ul>
