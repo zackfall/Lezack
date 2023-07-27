@@ -28,7 +28,7 @@ export function BlogPost({
           <FontAwesomeIcon className="text-sm mr-1" icon={faCircle} /> {tag}
         </p>
         <Link href={`/blog/${slug}`}>{title}</Link>
-        <p className="text-neutral-400 text-sm truncate">{description}</p>
+        <p className="text-neutral-400 text-sm ">{description}</p>
       </article>
     );
   }
