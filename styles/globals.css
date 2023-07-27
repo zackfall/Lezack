@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1023px) {
     .trunc-smaller {
         overflow: hidden;
         white-space: nowrap;
