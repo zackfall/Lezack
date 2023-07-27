@@ -17,8 +17,6 @@ export default function LastEntry({ post, tagColor }: LastEntryProps) {
           src={post.frontMatter.image}
           alt="Prueba por ahora"
           fill={false}
-          width={700}
-          height={700}
         />
         <div className="absolute bottom-0 left-0 bg-white bg-opacity-80 w-full h-16 sm:h-24 lg:h-32 xl:h-36 2xl:h-44">
           <BlogPost
