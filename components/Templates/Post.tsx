@@ -2,8 +2,9 @@ import { BlogPostProps, BlogProps } from "lib/types";
 import Head from "next/head";
 import Navbar from "@components/Molecules/Navbar";
 import Footer from "@components/Atoms/Footer";
-import { Post } from "@components/Organisms/Post";
+import { Post } from "@components/Molecules/Post";
 import { ReactNode } from "react";
+import Image from "@components/Atoms/Image";
 
 interface PostTempProps {
   className?: string;
@@ -28,8 +29,14 @@ export default function PostTemplate({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={`h-screen flex-col flex gap-y-6 font-sans ${className}`}>
+        <Image
+          className="image"
+          src="/assets/bkdk.svg"
+          alt="bkdk"
+          fill={false}
+        />
         <Navbar />
-        <Post className="flex-grow" post={post}>
+        <Post className="flex-grow post" post={post}>
           {children}
         </Post>
         <Footer />
