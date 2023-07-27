@@ -8,5 +8,5 @@ interface PostProps {
 }
 
 export function Post({ children, className, post }: PostProps) {
-  return <article>{children}</article>;
+  return <article className={className}>{children}</article>;
 }

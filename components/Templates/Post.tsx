@@ -9,12 +9,14 @@ interface PostTempProps {
   className?: string;
   post: BlogPostProps;
   title: string;
+  description: string;
   children: ReactNode;
 }
 
 export default function PostTemplate({
   className,
   title,
+  description,
   post,
   children,
 }: PostTempProps) {
@@ -22,6 +24,8 @@ export default function PostTemplate({
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={`h-screen flex-col flex gap-y-6 font-sans ${className}`}>
         <Navbar />
