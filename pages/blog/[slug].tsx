@@ -2,7 +2,7 @@ import { getFiles, getPostBySlug } from "lib/utils";
 import ReactMarkdown from "react-markdown";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { BlogPostProps } from "lib/types";
-import { Post } from "@components/Organisms/Post";
+import PostTemplate from "@components/Templates/Post";
 
 export async function getStaticPaths() {
   const posts = await getFiles("posts");
@@ -39,9 +39,9 @@ const BlogPost = (post: BlogPostProps) => {
   if (post.markdownBody.length < 1) return <>Empty</>;
 
   return (
-    <Post post={post}>
+    <PostTemplate post={post} title={post.frontMatter.title}>
       <ReactMarkdown>{post.markdownBody}</ReactMarkdown>
-    </Post>
+    </PostTemplate>
   );
 };
 
