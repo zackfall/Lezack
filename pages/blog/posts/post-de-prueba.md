@@ -9,6 +9,8 @@ index: 0
 
 # Este es un pequeño post
 
+![Frans](/assets/prueba_frans.png)
+
 Es solo para probar así que no va a tener nada especial.
 Por fin funciona la función de mostrar los posts en la web.
 
