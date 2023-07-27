@@ -3,6 +3,7 @@ title: Post de Prueba
 description: Pequeño post que servirá como prueba para testear que esté quedando bien la página de blogs para nuestros futuros posts para mi amorcito
 publishedDate: 2023/04/08
 tag: New Year
+image: /assets/prueba_frans.png
 index: 0
 ---
 
