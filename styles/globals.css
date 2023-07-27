@@ -7,7 +7,7 @@
 }
 
 .post {
-    margin: 0 12rem;
+    margin: 0 10rem;
     height: 100vh;
 }
 
@@ -25,7 +25,13 @@
     width: 100px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1366px) {
+    .post {
+        margin: 0 25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .trunc-smaller {
         overflow: hidden;
         white-space: nowrap;
