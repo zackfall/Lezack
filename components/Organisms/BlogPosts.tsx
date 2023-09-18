@@ -25,7 +25,7 @@ function getTagColor(post: BlogPostProps): string {
     case "Birthday":
       tagColor = "text-yellow-400";
       break;
-    case "Prueba":
+    case "Normal Day":
       tagColor = "text-green-700";
       break;
   }
