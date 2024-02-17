@@ -39,7 +39,7 @@ export default function PostTemplate({
         <Post className="flex-grow post" post={post}>
           {children}
         </Post>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
