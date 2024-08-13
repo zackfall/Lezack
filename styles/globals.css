@@ -8,8 +8,7 @@
 
 .post {
     margin: 0 10rem;
-
-    height: 100vh;
+    height: 100%;
 }
 
 .post img {

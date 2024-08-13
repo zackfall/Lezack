@@ -1,7 +1,10 @@
-import { IconCircleFilled } from "@tabler/icons-react";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Topi({color, children}: {color: string, children: React.ReactNode}) {
+export default function Topic({ className, children }: { className: string, children: React.ReactNode }) {
   return (
-    <><IconCircleFilled className={color} /> <span className={color}>{children}</span></>
+    <>
+      <FontAwesomeIcon className={`mr-1 ${className}`} icon={faCircle} /> <span className={className}>{children} </span><br/>
+    </>
   );
 }

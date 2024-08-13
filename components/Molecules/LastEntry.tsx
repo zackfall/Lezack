@@ -11,7 +11,7 @@ export default function LastEntry({ post, tagColor }: LastEntryProps) {
   return (
     <section>
       <h3 className="text-xl my-5">Last Post</h3>
-      <div className="relative w-2/3 m-auto border-gray-900 rounded-lg border-2">
+      <div className="relative w-4/3 lg:w-2/3 m-auto border-gray-900 rounded-lg border-2">
         <Image
           className="blur-[2px] sm:blur-sm w-full"
           src={post.frontMatter.image}
