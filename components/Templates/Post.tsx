@@ -1,4 +1,4 @@
-import { BlogPostProps, BlogProps } from "lib/types";
+import { BlogPostProps } from "lib/types";
 import Head from "next/head";
 import Navbar from "@components/Molecules/Navbar";
 import Footer from "@components/Atoms/Footer";
@@ -28,7 +28,7 @@ export default function PostTemplate({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className={`h-screen flex-col flex gap-y-6 font-sans ${className}`}>
+      <div className={`h-full flex-col flex gap-y-6 font-sans ${className}`}>
         <Image
           className="image"
           src="/assets/bkdk.svg"
@@ -36,10 +36,10 @@ export default function PostTemplate({
           fill={false}
         />
         <Navbar />
-        <Post className="flex-grow post" post={post}>
+        <Post className="flex-auto post" post={post}>
           {children}
         </Post>
-        {/* <Footer /> */}
+        <Footer className="flex-auto" />
       </div>
     </>
   );

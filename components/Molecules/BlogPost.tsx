@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Topic from "@components/Atoms/Topic";
 
 interface BlogPostProps {
   className?: string;
@@ -24,9 +25,7 @@ export function BlogPost({
   if (isLast) {
     return (
       <article className={className}>
-        <p className={`text-sm ${tagColor}`}>
-          <FontAwesomeIcon className="text-sm mr-1" icon={faCircle} /> {tag}
-        </p>
+        <Topic className={`text-sm ${tagColor}`}>{tag}</Topic>
         <Link href={`/blog/${slug}`}>{title}</Link>
         <p className="text-neutral-400 text-sm ">{description}</p>
       </article>
@@ -34,9 +33,7 @@ export function BlogPost({
   }
   return (
     <article className={className}>
-      <p className={`text-sm ${tagColor}`}>
-        <FontAwesomeIcon className="text-sm mr-1" icon={faCircle} /> {tag}
-      </p>
+        <Topic className={`text-sm ${tagColor}`}>{tag}</Topic>
       <Link href={`/blog/${slug}`}>{title}</Link>
       <p className="text-neutral-400 text-sm">{description}</p>
     </article>
